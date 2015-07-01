@@ -4,8 +4,8 @@ Glossário de comandos
 
 :Disciplina: Fundamentos de Sistemas Operacionais
 :Professor: Jurandy Soares
-:Nome: Seu nome completo
-:Matrícula: Sua matrícula
+:Nome: Arthur Gabriel Matias Lima da Silva
+:Matrícula: 20121144010605
 :Data: 01/07/2015
 
 cat
@@ -113,8 +113,12 @@ who
 
 
 whoami
-  Descrição do comando
+  Exibir nome do usuário logado na máquina.
+  Ex.: whoami.
 
 write
-  Descrição do comando
+  Escrever uma mensagem para um usuário.
+  Ex.: write colega "Mensagem"
+       echo "Mensagem" | write colega
+       cowsay -f koala "Mensagem" | write colega
 
