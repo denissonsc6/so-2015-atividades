@@ -175,3 +175,141 @@ write
        echo "Mensagem" | write colega
        cowsay -f koala "Mensagem" | write colega
 
+Ctrl + L
+  Comando responsável por limpar a tela, posicionando o prompt no canto superior esquerdo, para isso, digite: ctrl + l.
+  
+  
+git
+  Comando reponsável por informar todos os comandos referentes ao GitHub no terminal. Para visualizar os comandos disponível, digite: git + ENTER.
+  
+ 
+ 
+ssh
+  É um programa que permite realizar logon e executar comandos em uma máquina remota. Para logar a uma máquina através de seu 'ip', por exemplo, digite: ssh seunome@ip + ENTER.
+  
+  
+type
+  Comando usado para descobrir se o comando é arquivo binário interno ou externo, digite: type comando + ENTER;
+  
+  
+cp
+  Comando responsável por copiar arquivos e diretórios. Por exemplo, você possui um arquivo chamado 'imagem1.jpg' e deseja duplicalo, basta digitar: cp imagem1.jpg imagem2.jpg + ENTER. Assim, será criada uma cópia chamada 'imagem2.jpg'.
+  Caso seja necessário duplicar uma arquivo para diretórios diferentes, digire: cp ~/Web/Historico/historico.txt ~/Web + ENTER. Nesse caso, o arquivo 'historico.txt', que está no diretório '/Web/Historico', será copiado para o diretório '/Web'.
+  Também é possível copiar, por exemplo, vários arquivos de uma mesma extensão, digite: cp ~/pictures/picture-*.jpg ~/picture-backup + ENTER. Nesse caso, todos os arquivos 'picture-' de extensão '.jpg' serão copiados de '/pictures' para '/picture-backup'.
+  
+  
+  
+wc -l
+  Com este comando é possível contar o número de linhas de um determinado arquivo, digite: wc -l arquivo + ENTER.
+  
+ 
+ 
+pstree
+  Comando responsável por mostrar a árvore de processos de um determinado usuário, digite: pstree nomeusuario + ENTER.
+  
+
+
+gunzip
+  Comando responsável por descompactar um arquivo, por exemplo, um diretório possui um arquivo compactado 'arquivo.txt.gz' para descompacta-lo, digite: gunzip arquivo.txt.gz + ENTER. Então, será criado um novo arquivo descompactado no diretório chamado: arquivo.txt.
+  
+  
+rm
+  Comando responsável por excluir um ou mais arquivos.
+  
+  Argumentos:
+  
+  -d, --directory
+  
+  Remova diretórios, mesmo que eles não estando vazios. Disponível apenas para um usuário privilegiado.
+
+  -f, --force
+  
+  Remover arquivos protegidos contra gravação sem avisar.
+
+  --help
+  
+  Imprimir uma mensagem de ajuda e depois sai.
+
+  -i, --interactive
+  
+  Solicitar y (remover o arquivo) ou n (não remover o arquivo).
+
+  -no-preserve-root
+  
+  Não trate raiz (/) especialmente. Este é o padrão.
+
+  --preserve-root
+  
+  Não opere de forma recursiva na raiz (/).
+
+  -r, -R, --recursive
+  
+  Se arquivo for um diretório, remover todo o diretório e todo o seu conteúdo, incluindo subdiretórios. O uso desta opção pode ser perigoso.
+
+  -v, --verbose
+  
+  O modo detalhado (imprimir o nome de cada arquivo antes de removê-lo).
+
+  --version
+  
+  Informação sobre a versão e depois sai.
+
+  -
+  
+  Marcar o fim de opções. Utilize esta opção quando você precisa fornecer um nome de arquivo que começa com -.
+  
+
+
+sort
+  Comando reponsável por organizar linhas de comandos de arquivos.
+  
+  Argumentos:
+  
+  -d, --dictionary-order
+  
+  Classificar em ordem dicionário.
+  
+  -n
+  
+  Classificar em ordem aritmética.
+  
+  -g, --general-numeric-sort
+  
+  Classificar em ordem numérica geral.
+  
+  -u, --unique
+  
+  Linhas idênticas no arquivo de entrada aparecem apenas uma vez na saída.
+  
+  Exemplos:
+
+  Listar os arquivos por número decrescente de linhas:
+  wc -l * | sort -r
+
+  Alfabetizar uma lista de palavras, remova duplicatas, e imprimir a frequência de cada palavra:
+  sort -fd wordlist | uniq -c
+
+  Organizar o arquivo de senha numericamente pelo terceiro campo (ID do usuário):
+  sort -nk3,4 -t: /etc/passwd
+  
+  
+awk
+  É um utilitário responsável por processar arquivos de texto. 
+  
+  Exemplos:
+  
+  Cria um arquivo com argumentos concatenados no formato 'string + comando', a partir das informações de histórico armazenadas em outro arquivo.
+  
+  awk '{print "Comando: " $2}' historico.txt | sort -u > historico2.txt  + ENTER.
+  
+  Utlizia o mesmo princípio anterior, no entanto, adicionando títulos as colunas de cada argumento.
+  
+  awk 'BEGIN {printf "%-10s %s\n", "Name", "Number" 
+  
+  printf "%-10s %s\n", "----", "------"} 
+  
+  {printf "%-10s %s\n", $1, $2}' historico.txt > historico2.txt + ENTER.
+  
+  
+id
+  Comando responsável por mostrar o identificador de usuário na máquina(UID) e o GID(Grupo), digite: id + ENTER.
