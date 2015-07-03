@@ -110,7 +110,7 @@ wait
   Ex.:
 
 wall
-  Exibe uma mensagem ou um texto de um arquivo.
+  Exibe uma mensagem ou um texto de um arquivo para todas máquinas interligadas.
   Ex.: sudo wall "arquivo"
 
 which
