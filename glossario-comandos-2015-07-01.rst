@@ -4,9 +4,9 @@ Glossário de comandos
 
 :Disciplina: Fundamentos de Sistemas Operacionais
 :Professor: Jurandy Soares
-:Nome: Arthur Gabriel Matias Lima da Silva
-:Matrícula: 20121144010605
-:Data: 01/07/2015
+:Nome: Denisson da Silva Cortês
+:Matrícula: 20121144010559
+:Data: 03/07/2015
 
 cat
   Para exibir o conteúdo do arquivo na tela.
