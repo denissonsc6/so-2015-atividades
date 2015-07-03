@@ -9,11 +9,10 @@ Glossário de comandos
 :Data: 01/07/2015
 
 cat
-  Para exibir o arquivo, criar um arquivo ou concatenar arquivos.
+  Para exibir o conteúdo do arquivo na tela.
   Ex.: cat [opções] arquivo
   Ex.: cat arquivo
-  Ex.: cat > arquivo
-  Ex.: 
+  Ex.: cat > arquivo (criar arquivo)
 
 cd
   Change directory. Mudar diretório para padrão ou para outro diretório que o usuário queira.
@@ -23,20 +22,21 @@ cd
   
   
 cowsay
-  Descrição do comando
-
-
+  Exibe uma vaca (ou outro animal usando -f "formato") com um balão contendo um texto que o foi digitado. 
+  Ex.: cowsay -f dragon "Mensagem" | write "colega"
+  Ex.: cowsay ENTER; "Mensagem"; ^D
+  
 echo
-  Descrição do comando
-
+  O comando echo imprime (ou repete) seus argumentos para o termina.
+  Ex.: echo $USER
 
 env
   Exibe as variáveis de ambiente.
   Ex.: env
 
 exit
-  Descrição do comando
-
+  Terminar a sessão, ou seja, a shell.
+  Ex.: exit
 
 help
   Exibe todos os comandos e informações e suas informações, que podem ser utilizados no shell.
@@ -51,16 +51,17 @@ hostname
   Ex.: hostname
 
 ifconfig
-  Descrição do comando
+  Visualizar os ips da nossa máquina, entre outras funções relacionadas com ips.
+  Ex.: ifconfig
 
 
 last
-  Descrição do comando
-
+  Indica o último login de utilizadores.
+  Ex.: last
 
 lastb
-  Descrição do comando
-
+  Este comando exibe informações sobre as tentativas mal sucedidas de se logar ao sistema.
+  Ex.: lastb
 
 ls
   Listar arquivos que estão presente no diretório atual.
@@ -85,37 +86,46 @@ pwd
   Ex.: pwd
 
 set
-  Descrição do comando
-
+  Define variáveis da sessão, ou seja, da shell, na C shell, na bash ou na ksh.
+  Ex.: set
+  
+ssh
+  Sessão segura, vem de secure shell, e permite-nos logar num servidor através do protocolo ssh.
+  Ex.: ssh gabriel@10.209.1.158
 
 tree
   Exibe todos os diretórios, pastas e arquivos em formato de árvore. 
   Ex.: tree
 
-tty
-  Descrição do comando
+tty (TeleTypeWriter)
+  Este comando lhe informa qual o nome do arquivo conectado à entrada padrão.
+  Ex.: tty
 
 vim
-  Descrição do comando
+  Editor de texto full-screen.
+  Ex.: vim "nome do arquivo"
 
 wait
-  Descrição do comando
-
+  Espera um processo em segundo plano ser completado.
+  Ex.:
 
 wall
-  Descrição do comando
-
+  Exibe uma mensagem ou um texto de um arquivo.
+  Ex.: sudo wall "arquivo"
 
 which
-  Descrição do comando
-
+  Mostra o caminho completo de um comando/script.
+  Ex.: which cat
 
 while
-  Descrição do comando
-
+  Estrutura de repetição.
+  Ex.: while command
+       do
+        Statement(s) to be executed if command is true
+       done
 
 who
-  Usuários que estão em conexão com a mesma máquina.
+  Mostra-nos quem está logado no sistema.
   Ex.: who
 
 whoami
@@ -123,7 +133,7 @@ whoami
   Ex.: whoami
 
 write
-  Escrever uma mensagem para um usuário.
+  Escrever para outros utilizadores que estejam logados no momento
   Ex.: write colega "Mensagem"
        echo "Mensagem" | write colega
        cowsay -f koala "Mensagem" | write colega
